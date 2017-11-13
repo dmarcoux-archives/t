@@ -10,18 +10,20 @@ Rails 5 JSON API for users and their tasks. Each user has different needs
 regarding privacy, maintenance schedules and security. This explains why the
 project deals with multiple databases.
 
-# Usage
+# Setup
 
-It is recommended to use Docker and Docker-Compose. The project has been tested
-on Linux with Docker `17.10.0-ce` and Docker-Compose `1.17.0`.
+1. Install Docker and Docker-Compose (Tested on Linux with versions `17.10.0-ce`
+   and `1.17.0` respectively)
+2. Copy the environment file with `cp .env.example .env`
 
 # Application
 
-1. Copy the environment file with `cp .env.example .env`
-2. Start the application with `docker-compose up development`
-3. Access it at `localhost:3000` (The port is the value of `$RAILS_PORT` from the file `.env`)
+1. Start the application with `docker-compose up development`
+2. Access it at `localhost:3000` (The port is the value of `$RAILS_PORT` from the file `.env`)
     1. TODO Example for endpoints
 
-# Specs/Tests
+# Development
 
-1. TODO
+1. Start the development environment with `docker-compose run development bash`
+    1. Run specs/tests with: TODO
+    2. Run code style checks with: `rubocop` (TODO: Fix issues)
