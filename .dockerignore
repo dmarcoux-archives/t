@@ -1,6 +1,7 @@
 .git
 .gitignore
 *.md
+.env.example
 
 # Taken from .gitignore
 .ruby-version

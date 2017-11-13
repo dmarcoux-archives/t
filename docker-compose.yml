@@ -3,24 +3,24 @@ services:
   database:
     container_name: t-db
     env_file:
-      - docker-compose.env
+      - .env
     image: postgres:10.1
     ports:
-      - 5432:5432
+      - $POSTGRES_PORT:$POSTGRES_PORT
 
   development:
     build: .
     # With 0.0.0.0, it's reachable outside the container
-    command: bundle exec rackup --host 0.0.0.0
+    command: bundle exec rackup --host 0.0.0.0 --port $RAILS_PORT
     container_name: t-development
     env_file:
-      - docker-compose.env
+      - .env
     environment:
       - RAILS_ENV=development
     depends_on:
       - database
     ports:
-      - 9292:9292
+      - $RAILS_PORT:$RAILS_PORT
     volumes:
       # /app is the same as WORKDIR in Dockerfile
       - .:/app
