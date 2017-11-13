@@ -18,4 +18,5 @@ group :development, :test do
 
   # Behaviour Driven Development
   gem 'rspec'
+  gem 'rspec-rails'
 end
