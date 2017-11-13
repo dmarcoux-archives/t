@@ -1,6 +1,9 @@
 FROM ruby:2.4.2
 MAINTAINER Dany Marcoux
 
+# Install PostgreSQL client
+RUN apt-get update && apt-get install --yes postgresql-client
+
 # Default to UTF-8 file.encoding
 # https://github.com/docker-library/docs/tree/master/ruby#encoding
 ENV LANG C.UTF-8

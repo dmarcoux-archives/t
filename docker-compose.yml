@@ -2,10 +2,8 @@ version: '3'
 services:
   database:
     container_name: t-db
-    environment:
-      - POSTGRES_USER=t
-      - POSTGRES_PASSWORD=t-password
-      - POSTGRES_DB=t-db
+    env_file:
+      - docker-compose.env
     image: postgres:10.1
     ports:
       - 5432:5432
@@ -15,6 +13,8 @@ services:
     # With 0.0.0.0, it's reachable outside the container
     command: bundle exec rackup --host 0.0.0.0
     container_name: t-development
+    env_file:
+      - docker-compose.env
     environment:
       - RAILS_ENV=development
     depends_on:
