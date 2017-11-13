@@ -1,24 +1,26 @@
-# README
+```
+@dmarcoux/t
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pre-interview Task
+```
 
-Things you may want to cover:
+# Introduction
 
-* Ruby version
+Rails 5 JSON API for users and their tasks. Each user has different needs
+regarding privacy, maintenance schedules and security. This explains why the
+project deals with multiple databases.
 
-* System dependencies
+# Usage
 
-* Configuration
+It is recommended to use Docker and Docker-Compose. The project has been tested
+on Linux with Docker `17.10.0-ce` and Docker-Compose `1.17.0`.
 
-* Database creation
+# Application
 
-* Database initialization
+1. Start the application with `docker-compose run development`
+2. Access it at `localhost:9292`
+    1. TODO Example for endpoints
 
-* How to run the test suite
+# Specs/Tests
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. TODO
