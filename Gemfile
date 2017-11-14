@@ -8,6 +8,9 @@ gem 'pg', '~> 0.21'
 # Simple, fast, threaded, and highly concurrent HTTP 1.1 server
 gem 'puma', '~> 3.10.0'
 
+# Ruby binding for the OpenBSD bcrypt() password hashing algorithm
+gem 'bcrypt', '~> 3.1.11'
+
 group :development, :test do
   # Static code analyzer
   gem 'rubocop', require: false
