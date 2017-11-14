@@ -7,8 +7,9 @@ Pre-interview Task
 # Introduction
 
 Rails 5 JSON API for users and their tasks. Each user has different needs
-regarding privacy, maintenance schedules and security. This explains why the
-project deals with multiple databases.
+regarding privacy, maintenance schedules and security. To respect this, each
+user has a database for his/her tasks. As for users, they are stored in a single
+database.
 
 # Setup
 
