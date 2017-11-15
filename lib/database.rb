@@ -3,9 +3,9 @@ module Database
 
   # Callback when creating a user
   def create_tasks_database
-    ActiveRecord::Base.connection.create_database(Database.name(email))
+    ActiveRecord::Base.connection.create_database(Database.name(id))
 
-    Database.connect_to(Database.name(email))
+    Database.connect_to(Database.name(id))
 
     # Migrate the newly created database
     ActiveRecord::Migrator.migrate(Rails.root.join('db/migrate/tasks'))
@@ -19,7 +19,7 @@ module Database
     # Connect to the users database
     Database.connect_to(ENV.fetch('POSTGRES_DB'))
     # so we can drop the tasks database of the user
-    ActiveRecord::Base.connection.drop_database(Database.name(email))
+    ActiveRecord::Base.connection.drop_database(Database.name(id))
   end
 
   def self.name(identifier)
