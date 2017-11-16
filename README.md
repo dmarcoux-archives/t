@@ -23,10 +23,10 @@ database.
 
 1. Start the application with `docker-compose up development`
 2. Access it at `localhost:3000` (The port is the value of `$RAILS_PORT` from the file `.env`)
-    1. TODO Example for endpoints
+    1. Create a user: `curl --verbose --header "Content-Type: application/json" --data '{ "user": {"email":"me@example.com","password":"'12345'"} }' localhost:3000/users`
 
 # Development
 
-1. Start the development environment with `docker-compose run development bash`
+1. Start the development environment with `docker-compose run --service-ports development bash`
     1. Run specs/tests with: TODO
     2. Run code style checks with: `rubocop` (TODO: Fix issues)
