@@ -11,6 +11,9 @@ gem 'puma', '~> 3.10.0'
 # Ruby binding for the OpenBSD bcrypt() password hashing algorithm
 gem 'bcrypt', '~> 3.1.11'
 
+# Seamless JWT authentication for Rails API
+gem 'knock', '~> 2.1.1'
+
 group :development, :test do
   # Static code analyzer
   gem 'rubocop', require: false
