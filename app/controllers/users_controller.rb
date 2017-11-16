@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # POST /create
+  # POST
   def create
     user = User.new(user_params)
 
