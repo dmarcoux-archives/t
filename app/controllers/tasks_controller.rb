@@ -1,7 +1,10 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user, :switch_tenant
+
   # GET
   def index
-    Task.all
+    # This could be paginated
+    render(json: Task.all.to_json, status: 200)
   end
 
   # POST
@@ -13,6 +16,10 @@ class TasksController < ApplicationController
   end
 
   private
+
+  def switch_tenant
+    Apartment::Tenant.switch!(Database.name(current_user.id))
+  end
 
   def task_params
     params.require(:task).permit(:start, :end, :description)

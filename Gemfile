@@ -14,6 +14,9 @@ gem 'bcrypt', '~> 3.1.11'
 # Seamless JWT authentication for Rails API
 gem 'knock', '~> 2.1.1'
 
+# Database multi-tenancy
+gem 'apartment', '~> 2.0.0'
+
 group :development, :test do
   # Static code analyzer
   gem 'rubocop', require: false
