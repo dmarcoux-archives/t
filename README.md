@@ -44,4 +44,4 @@ database.
 
 1. Start the development environment with `docker-compose run --service-ports development bash`
     1. Run specs/tests with: TODO
-    2. Run code style checks with: `rubocop` (TODO: Fix issues)
+    2. Run code style checks with: `rubocop`

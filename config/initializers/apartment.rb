@@ -1,5 +1,5 @@
 # You can have Apartment route to the appropriate Tenant by adding some Rack middleware.
-# Apartment can support many different "Elevators" that can take care of this routing to your data.
+# Apartment can support many different 'Elevators' that can take care of this routing to your data.
 # Require whichever Elevator you're using below or none if you have a custom one.
 #
 # require 'apartment/elevators/generic'
@@ -11,7 +11,6 @@
 # Apartment Configuration
 #
 Apartment.configure do |config|
-
   # Add any models that you do not want to be multi-tenanted, but remain in the global (public) namespace.
   # A typical example would be a Customer or Tenant model that stores each Tenant's information.
   #
@@ -21,7 +20,8 @@ Apartment.configure do |config|
   # You can make this dynamic by providing a Proc object to be called on migrations.
   # This object should yield either:
   # - an array of strings representing each Tenant name.
-  # - a hash which keys are tenant names, and values custom db config (must contain all key/values required in database.yml)
+  # - a hash which keys are tenant names, and values custom db config (must contain all key/values required in
+  #   database.yml)
   #
   # config.tenant_names = lambda{ Customer.pluck(:tenant_name) }
   # config.tenant_names = ['tenant1', 'tenant2']
