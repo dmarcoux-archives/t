@@ -15,16 +15,15 @@ database.
 
 1. Install Docker and Docker-Compose (Tested on Linux with versions `17.10.0-ce`
    and `1.17.0` respectively)
-2. Copy the environment file with `cp .env.example .env` (TODO: Move this to
-   bin/setup)
+2. Copy the environment file with `cp .env.example .env`
 3. Copy the secrets file with `cp config/secrets.yml.example config/secrets.yml`
-   and change values inside the file (TODO: Move this to
-   bin/setup)
-
 
 # Application
 
-1. Start the application with `docker-compose up development`
+1. Start the application with `docker-compose up development` (If you get the
+   error `PG::ConnectionBad: could not connect to server: Connection refused`,
+   run it again as sometimes the database isn't ready in time for the
+   application)
 2. Access it at `localhost:3000` (The port is the value of `$RAILS_PORT` from the file `.env`)
     1. Create a user:
     ```shell
