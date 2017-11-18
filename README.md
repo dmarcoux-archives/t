@@ -15,9 +15,12 @@ database.
 
 1. Install Docker and Docker-Compose (Tested on Linux with versions `17.10.0-ce`
    and `1.17.0` respectively)
-2. Copy the environment file with `cp .env.example .env`
+2. Copy the environment file with `cp .env.example .env` (TODO: Move this to
+   bin/setup)
 3. Copy the secrets file with `cp config/secrets.yml.example config/secrets.yml`
-   and change values inside the file
+   and change values inside the file (TODO: Move this to
+   bin/setup)
+
 
 # Application
 
