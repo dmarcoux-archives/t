@@ -22,8 +22,7 @@ group :development, :test do
   gem 'rubocop', require: false
 
   # Debugger
-  gem 'pry'
-  gem 'pry-nav'
+  gem 'byebug'
 
   # Behaviour Driven Development
   gem 'rspec'
